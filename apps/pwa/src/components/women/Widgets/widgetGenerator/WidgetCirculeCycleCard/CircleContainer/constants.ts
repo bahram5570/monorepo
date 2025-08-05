@@ -1,0 +1,3 @@
+export const CIRCLE_TOTAL_AVAILABLE_PROGRESS_PERCENTAGE = 96 / 100;
+export const CIRCLE_LINES_WIDTH = 5;
+export const CIRCLE_EXTRA_SIZE = 6;

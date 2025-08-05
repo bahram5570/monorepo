@@ -1,0 +1,22 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: animation 0.3s linear backwards;
+}
+
+@keyframes animation {
+  from {
+    max-height: 0px;
+    opacity: 0;
+  }
+  to {
+    max-height: 400px;
+    opacity: 1;
+  }
+}

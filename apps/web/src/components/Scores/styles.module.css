@@ -1,0 +1,5 @@
+.textGradient p {
+  background-image: linear-gradient(#18bffb, #2072f3) !important;
+  color: transparent !important;
+  background-clip: text !important;
+}

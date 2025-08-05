@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: YekanBakhVF;
+  src: url('/assets/fonts/YekanBakh-VF.ttf');
+}
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import '~react-toastify/dist/ReactToastify.min.css';
+
+body {
+  font-family: YekanBakhVF;
+}
+
+button,
+input {
+  outline: none;
+}
+
+input {
+  direction: rtl;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.hideScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}

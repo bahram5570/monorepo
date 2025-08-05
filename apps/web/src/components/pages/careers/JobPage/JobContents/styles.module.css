@@ -1,0 +1,21 @@
+.main h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.main h2,
+.main h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.main p {
+  font-size: 18px;
+}
+
+.main li {
+  list-style-type: disc;
+  margin: 0 16px;
+  font-size: 16px;
+  padding: 4px 0;
+}

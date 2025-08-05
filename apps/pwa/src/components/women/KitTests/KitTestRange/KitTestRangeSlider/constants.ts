@@ -1,0 +1,2 @@
+export const KIT_TEST_RANGE_SLIDER_HEIGHT = 62;
+export const KIT_TEST_RANGE_SLIDER_THUMB_SIZE = 30;

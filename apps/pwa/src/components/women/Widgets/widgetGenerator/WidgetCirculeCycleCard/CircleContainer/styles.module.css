@@ -1,0 +1,15 @@
+.container {
+  animation: animation 0.5s linear backwards;
+}
+
+@keyframes animation {
+  from {
+    transform: rotate(-20deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}

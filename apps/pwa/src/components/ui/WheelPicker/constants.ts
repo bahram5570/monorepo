@@ -1,0 +1,3 @@
+export const WHEEL_PICKER_CELL_HEIGHT = 45;
+export const WHEEL_PICKER_TOTAL_CELLS = 5;
+export const WHEEL_PICKER_EXTRA_CELLS = 2;

@@ -1,0 +1,28 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 80;
+  margin: 0 auto;
+}
+
+.progress {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  box-shadow: 0 3px 5px #00000033;
+  animation: animate 5s linear backwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

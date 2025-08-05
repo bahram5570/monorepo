@@ -1,0 +1,22 @@
+.map :global(.leaflet-top) {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.map :global(.leaflet-control) {
+  margin: 0;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.map :global(.leaflet-control) a {
+  height: 36px;
+  padding-top: 4px;
+}
+
+.map :global(.leaflet-control-attribution) {
+  display: none;
+}

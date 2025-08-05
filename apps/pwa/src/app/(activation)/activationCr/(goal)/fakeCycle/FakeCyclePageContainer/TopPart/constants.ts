@@ -1,0 +1,1 @@
+export const FAKE_CYCLE_HEADING_HEIGHT = 560;

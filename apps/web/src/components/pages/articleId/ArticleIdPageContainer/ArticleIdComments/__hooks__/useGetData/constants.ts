@@ -1,0 +1,1 @@
+export const ARTICLE_ID_COMMENTS_PAGE_SIZE = 10;

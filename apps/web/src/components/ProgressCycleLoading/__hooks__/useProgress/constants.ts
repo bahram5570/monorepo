@@ -1,0 +1,1 @@
+export const MAX_STROKE_DASHOFFSET = 568;

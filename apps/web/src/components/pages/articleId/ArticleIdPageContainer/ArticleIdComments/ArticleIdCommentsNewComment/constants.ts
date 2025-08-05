@@ -1,0 +1,1 @@
+export const COMMENTS_MAX_CHARACTERS = 300;

@@ -1,0 +1,2 @@
+export const START_MODE_LOADING_PERCENTAGE = 45;
+export const MAX_STROKE_DASHOFFSET = 568;

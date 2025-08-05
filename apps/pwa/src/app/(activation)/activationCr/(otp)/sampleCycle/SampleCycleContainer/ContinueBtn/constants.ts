@@ -1,0 +1,1 @@
+export const SAMPLE_CYCLE_CONTINUE_BTN_HEIGHT = 80;

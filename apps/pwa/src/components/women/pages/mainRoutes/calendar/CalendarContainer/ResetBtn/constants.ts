@@ -1,0 +1,1 @@
+export const RESET_BUTTON_MAX_HEIGHT = 48;

@@ -1,0 +1,27 @@
+// # Naming queryis ---> component name + description
+
+export const MODALS = {
+  // # image
+  PREVIEW_IMAGE: 'PREVIEW_IMAGE',
+
+  // # widgets
+  WIDGET_POPUP: 'WIDGET_POPUP',
+
+  // # kits
+  TEST_KITS_LIST_DELETE: 'TEST_KITS_LIST_DELETE',
+  TEST_KITS_LIST_BABYCHECK: 'TEST_KITS_LIST_BABYCHECK',
+  TEST_KITS_LIST_OVULATION: 'TEST_KITS_LIST_OVULATION',
+  TEST_KITS_BABYCHECK: 'TEST_KITS_BABYCHECK',
+
+  // # story
+  STORY_MODAL_ID: 'STORY_MODAL_ID',
+
+  // # nameSelector
+  NAME_SELECTOR_FILTER_GENDER: 'NAME_SELECTOR_FILTER_GENDER',
+  NAME_SELECTOR_FILTER_STYLES: 'NAME_SELECTOR_FILTER_STYLES',
+};
+
+export const EXCLUDE_PAGES_MODALS = [
+  '/protected/shareExperience',
+  //
+];

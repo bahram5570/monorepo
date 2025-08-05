@@ -1,0 +1,38 @@
+import MainActivationModule from '@components/activation/MainActivationModule';
+import WeightHeightModule from '@components/activation/WeightHeightModule';
+import usePageInfo from '@providers/__activation__/ActivationProvider/__hooks__/usePageInfo';
+
+import { Pregnancy4ContainerProps } from './types';
+
+const Pregnancy4Container = ({
+  payloadHandler,
+  payload,
+  info,
+  activationData,
+  isLoading,
+  onRegister,
+}: Pregnancy4ContainerProps) => {
+  const { nextPageHandler, pageInfo, options } = usePageInfo({ payloadHandler, payload, info, activationData });
+
+  if (options === undefined) {
+    return <></>;
+  }
+
+  const valueHandler = (v: number) => {
+    nextPageHandler({
+      nextActivation: info.nextActivationList.condition1?.url || '',
+      rewardId: info.nextActivationList.condition1?.rewardId,
+    });
+    payloadHandler({ weightBeforePregnancy: v });
+  };
+
+  return (
+    <>
+      <MainActivationModule isLoading={isLoading} onRegister={onRegister} {...pageInfo}>
+        <WeightHeightModule type="weight" valueHandler={valueHandler} />
+      </MainActivationModule>
+    </>
+  );
+};
+
+export default Pregnancy4Container;

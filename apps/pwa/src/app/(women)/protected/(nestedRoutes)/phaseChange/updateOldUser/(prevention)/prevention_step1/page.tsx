@@ -1,0 +1,26 @@
+'use client';
+
+import Prevention1Container from '@components/activation/pages/prevention/Prevention1Container/page';
+import usePhaseChangeData from '@providers/PhaseChangeProvider/__hooks__/usePhaseChangeData';
+import usePhaseChangePayload from '@providers/PhaseChangeProvider/__hooks__/usePhaseChangePayload';
+
+import { COMPLETE_ACTIVATION_ROUTES } from '../../routesInfo';
+
+const PreventionStep1 = () => {
+  // # حس پریود
+  const { payload, payloadHandler } = usePhaseChangePayload();
+  const activationData = usePhaseChangeData();
+
+  return (
+    <>
+      <Prevention1Container
+        payload={payload}
+        activationData={activationData}
+        payloadHandler={payloadHandler}
+        info={COMPLETE_ACTIVATION_ROUTES.prevention_step1}
+      />
+    </>
+  );
+};
+
+export default PreventionStep1;

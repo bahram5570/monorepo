@@ -1,0 +1,108 @@
+import './globals.css';
+
+import { MAX_SCREEN_WIDTH, PORTAL_ID } from '@constants/app.constants';
+import CultureProvider from '@providers/CultureProvider';
+import ErrorProvider from '@providers/ErrorProvider';
+import ModalsQueryParamsProvider from '@providers/ModalsQueryParamsProvider';
+import OperatingSystemProvider from '@providers/OperatingSystemProvider';
+import PageNavigationProvider from '@providers/PageNavigationProvider';
+import PreviewImageProvider from '@providers/PreviewImageProvider';
+import ReactQueryProvider from '@providers/ReactQueryProvider';
+import RouteSequenceProvider from '@providers/RouteSequenceProvider';
+import ScrollToTopProvider from '@providers/ScrollToTopProvider';
+import ServiceWorkerProvider from '@providers/ServiceWorkerProvider';
+import ThemeModeProvider from '@providers/ThemeModeProvider';
+import ToastProvider from '@providers/ToastProvider';
+import WidgetActionsProvider from '@providers/WidgetActionsProvider';
+import type { Metadata, Viewport } from 'next';
+import localFont from 'next/font/local';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'ایمپو',
+  description: 'ایمپو',
+};
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  maximumScale: 1,
+  width: 'device-width',
+};
+
+const YekanBakhVF = localFont({
+  display: 'swap',
+  src: '../../public/assets/fonts/YekanBakh-VF.ttf',
+});
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="fa" className={YekanBakhVF.className}>
+      <head>
+        {/* <Script>
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PPTJBP3H');
+          `}
+        </Script>
+
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-8W7DSYHFVP" />
+
+        <Script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8W7DSYHFVP');
+          `}
+        </Script> */}
+      </head>
+
+      <body style={{ maxWidth: MAX_SCREEN_WIDTH, width: '100%', height: '100dvh', margin: 'auto' }}>
+        {/* <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PPTJBP3H"
+            style={{ display: 'none', visibility: 'hidden' }}
+            height="0"
+            width="0"
+          />
+        </noscript> */}
+
+        <ScrollToTopProvider />
+
+        <OperatingSystemProvider>
+          <CultureProvider>
+            <ThemeModeProvider>
+              <ReactQueryProvider>
+                <ErrorProvider>
+                  <ToastProvider>
+                    <PageNavigationProvider>
+                      <RouteSequenceProvider>
+                        <WidgetActionsProvider>
+                          {/* <ServiceWorkerProvider> */}
+                            <>
+                              <>{children}</>
+                              <ModalsQueryParamsProvider />
+                              <PreviewImageProvider />
+                              <div id={PORTAL_ID} />
+                            </>
+                          {/* </ServiceWorkerProvider> */}
+                        </WidgetActionsProvider>
+                      </RouteSequenceProvider>
+                    </PageNavigationProvider>
+                  </ToastProvider>
+                </ErrorProvider>
+              </ReactQueryProvider>
+            </ThemeModeProvider>
+          </CultureProvider>
+        </OperatingSystemProvider>
+      </body>
+    </html>
+  );
+}

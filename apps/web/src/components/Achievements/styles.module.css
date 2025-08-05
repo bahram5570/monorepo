@@ -1,0 +1,5 @@
+.textGradient p:first-child {
+  background-image: linear-gradient(#f24f7a, #ff7268) !important;
+  color: transparent !important;
+  background-clip: text !important;
+}

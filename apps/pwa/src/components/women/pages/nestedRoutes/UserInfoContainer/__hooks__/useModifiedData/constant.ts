@@ -1,0 +1,30 @@
+import { CalendarTypeEnum } from '@constants/date.constants';
+import { ProfileResponseTypes } from '@providers/ProfileProvider/__hooks__/useGetProfileData/type';
+
+export const INITIAL_VALUES: ProfileResponseTypes = {
+  name: '',
+  pregnancyDate: '',
+  isDelivery: 0,
+  avatar: '',
+  username: '',
+  remaindDays: 0,
+  birthDate: '',
+  periodLength: 0,
+  cycleLength: 0,
+  sexualStatus: 0,
+  interfaceCode: '',
+  interfaceText: '',
+  interfaceShareText: '',
+  calendarType: CalendarTypeEnum.Jalali,
+  status: 0,
+  periodStatus: 0,
+  week: 0,
+  changeStatusBtns: [],
+  updateInteraction: { type: 0, data: '', isDismissible: false, delaySecond: 0 },
+  updated: false,
+  childType: 0,
+  childName: '',
+  childBirthDate: '',
+  supportPhone: '',
+  cycleTheme: 0,
+};

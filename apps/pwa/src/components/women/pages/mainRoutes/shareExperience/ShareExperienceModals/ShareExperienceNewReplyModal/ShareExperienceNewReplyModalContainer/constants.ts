@@ -1,0 +1,1 @@
+export const NEW_REPLY_MAX_CHARACTERS = 400;

@@ -1,0 +1,36 @@
+.wave {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  --totalHeight: 850px;
+  transform: translateY(var(--totalHeight));
+}
+
+.wave.loading {
+  animation: loadingAnimation 3s linear forwards;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    transform: translateY(var(--totalHeight));
+  }
+  80% {
+    transform: translateY(var(--totalHeight));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wave.successed {
+  animation: successedAnimation 0.5s linear forwards;
+}
+
+@keyframes successedAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(var(--totalHeight));
+  }
+}
