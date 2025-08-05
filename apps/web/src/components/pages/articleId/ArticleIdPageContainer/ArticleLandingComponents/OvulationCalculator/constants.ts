@@ -1,1 +1,0 @@
-export const PREGNANCY_WEEKS_TOTAL_DAYS = 280;

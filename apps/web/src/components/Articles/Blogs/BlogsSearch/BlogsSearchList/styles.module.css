@@ -1,8 +1,0 @@
-.modal::-webkit-scrollbar {
-  width: 6px;
-}
-
-.modal::-webkit-scrollbar-thumb {
-  background: #f24f7a;
-  border-radius: 10px;
-}
