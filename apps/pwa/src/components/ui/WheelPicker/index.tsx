@@ -1,12 +1,20 @@
 import { useState } from 'react';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  Swiper as SwiperComponent,
+  SwiperProps,
+  SwiperSlide as SwiperSlideComponent,
+  SwiperSlideProps,
+} from 'swiper/react';
 
 import WheelPickerCellGenerator from './WheelPickerCellGenerator';
 import useWheelPickerListData from './__hooks__/useWheelPickerListData';
 import useWheelPickerReady from './__hooks__/useWheelPickerReady';
 import { WHEEL_PICKER_CELL_HEIGHT, WHEEL_PICKER_EXTRA_CELLS, WHEEL_PICKER_TOTAL_CELLS } from './constants';
 import { WheelPickerProps } from './types';
+
+const Swiper = SwiperComponent as React.FC<SwiperProps>;
+const SwiperSlide = SwiperSlideComponent as React.FC<SwiperSlideProps>;
 
 const WheelPicker = ({ list, defaultValue, valueHandler }: WheelPickerProps) => {
   const { wheelPickerListData } = useWheelPickerListData({ list, defaultValue });

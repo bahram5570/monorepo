@@ -24,9 +24,8 @@ const config: Config = {
     '^.+\\.css$': 'jest-css-modules-transform',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules'],
-  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
-  // setupFiles: ['<rootDir>/jest.setup.ts'],
 };
 
 export default config;

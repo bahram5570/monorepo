@@ -4,14 +4,16 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "dev:pwa": "turbo run dev --filter=pwa",
+    "test:pwa": "turbo run test:unit --filter=pwa",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
-    "turbo": "^2.5.5",
-    "typescript": "5.8.3"
+    "ts-node": "^10.9.2",
+    "turbo": "^2.5.5"
   },
   "engines": {
     "node": ">=18"
@@ -20,5 +22,11 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "typescript": "^5.8.3",
+    "next": "14.2.5", 
+    "react": "^18",
+    "react-dom": "^18"
+  }
 }
