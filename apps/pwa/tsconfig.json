@@ -1,11 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "jsx": "preserve",
     "paths": {
       "@components/*": [
         "./src/components/*"
@@ -41,9 +37,12 @@
         "./src/lib/*"
       ]
     },
-    "jsx": "preserve"
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "jsx": "react-jsx",
   "include": [
     "**/*.ts",
     "**/*.tsx",

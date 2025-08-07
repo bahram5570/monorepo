@@ -1,5 +1,6 @@
 import './globals.css';
 
+import { getCultureCookie } from '@actions/cookie.actions';
 import { MAX_SCREEN_WIDTH, PORTAL_ID } from '@constants/app.constants';
 import CultureProvider from '@providers/CultureProvider';
 import ErrorProvider from '@providers/ErrorProvider';
@@ -16,7 +17,6 @@ import ToastProvider from '@providers/ToastProvider';
 import WidgetActionsProvider from '@providers/WidgetActionsProvider';
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'ایمپو',
@@ -34,11 +34,9 @@ const YekanBakhVF = localFont({
   src: '../../public/assets/fonts/YekanBakh-VF.ttf',
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = async ({ children }: { children: React.ReactNode }) => {
+  const cultureCookie = await getCultureCookie();
+
   return (
     <html lang="fa" className={YekanBakhVF.className}>
       <head>
@@ -77,7 +75,7 @@ export default function RootLayout({
         <ScrollToTopProvider />
 
         <OperatingSystemProvider>
-          <CultureProvider>
+          <CultureProvider defaultValues={cultureCookie}>
             <ThemeModeProvider>
               <ReactQueryProvider>
                 <ErrorProvider>
@@ -85,14 +83,15 @@ export default function RootLayout({
                     <PageNavigationProvider>
                       <RouteSequenceProvider>
                         <WidgetActionsProvider>
-                          {/* <ServiceWorkerProvider> */}
+                          <ServiceWorkerProvider>
                             <>
-                              <>{children}</>
                               <ModalsQueryParamsProvider />
                               <PreviewImageProvider />
+
                               <div id={PORTAL_ID} />
+                              <>{children}</>
                             </>
-                          {/* </ServiceWorkerProvider> */}
+                          </ServiceWorkerProvider>
                         </WidgetActionsProvider>
                       </RouteSequenceProvider>
                     </PageNavigationProvider>
@@ -105,4 +104,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
