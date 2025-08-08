@@ -7,6 +7,7 @@
   src: url('/assets/fonts/YekanBakh-VF.ttf');
 }
 
+@import '@repo/ui/styles.css';
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@repo/ui": "*",
-    "@repo/core": "*",
+    "@repo/assets": "*",
     "@lottiefiles/dotlottie-react": "^0.8.6",
     "@tanstack/react-query": "^5.55.4",
     "@tanstack/react-query-devtools": "^5.55.4",

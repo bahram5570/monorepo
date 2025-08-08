@@ -89,7 +89,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
                               <PreviewImageProvider />
 
                               <div id={PORTAL_ID} />
-                              {/* <>{children}</> */}
+                              <>{children}</>
                             </>
                           </ServiceWorkerProvider>
                         </WidgetActionsProvider>
