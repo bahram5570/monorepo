@@ -3,39 +3,17 @@
   "compilerOptions": {
     "jsx": "preserve",
     "paths": {
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@providers/*": [
-        "./src/providers/*"
-      ],
-      "@constants/*": [
-        "./src/constants/*"
-      ],
-      "@actions/*": [
-        "./src/app/actions/*"
-      ],
-      "@services/*": [
-        "./src/services/*"
-      ],
-      "@assets/*": [
-        "./public/assets/*"
-      ],
-      "@theme/*": [
-        "./src/theme/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ],
-      "@hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@app/*": [
-        "./src/app/*"
-      ],
-      "@lib/*": [
-        "./src/lib/*"
-      ]
+      "@components/*": ["./src/components/*"],
+      "@providers/*": ["./src/providers/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@actions/*": ["./src/app/actions/*"],
+      "@services/*": ["./src/services/*"],
+      "@assets/*": ["./public/assets/*"],
+      "@theme/*": ["./src/theme/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@app/*": ["./src/app/*"],
+      "@lib/*": ["./src/lib/*"]
     },
     "plugins": [
       {
@@ -54,7 +32,5 @@
     ".next/types/**/*.ts",
     "public/serviceWorker.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

@@ -1,16 +1,11 @@
-'use client';
-
-import dynamic from 'next/dynamic';
-
-const DynamicComponentWithNoSSR = dynamic(
-  () => import('@components/women/pages/nestedRoutes/IdentifictionCodeContainer'),
-  {
-    ssr: false,
-  },
-);
+import IdentifictionCodeContainer from '@components/women/pages/nestedRoutes/IdentifictionCodeContainer';
 
 const IdentificationCode = () => {
-  return <DynamicComponentWithNoSSR />;
+  return (
+    <>
+      <IdentifictionCodeContainer />
+    </>
+  );
 };
 
 export default IdentificationCode;

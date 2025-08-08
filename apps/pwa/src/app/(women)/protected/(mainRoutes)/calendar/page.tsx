@@ -1,13 +1,11 @@
-'use client';
-
-import dynamic from 'next/dynamic';
-
-const DynamicComponentWithNoSSR = dynamic(() => import('@components/women/pages/mainRoutes/calendar/CalendarPage'), {
-  ssr: false,
-});
+import CalendarPage from '@components/women/pages/mainRoutes/calendar/CalendarPage';
 
 const Calendar = () => {
-  return <DynamicComponentWithNoSSR />;
+  return (
+    <>
+      <CalendarPage />
+    </>
+  );
 };
 
 export default Calendar;

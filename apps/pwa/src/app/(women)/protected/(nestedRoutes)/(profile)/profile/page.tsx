@@ -1,16 +1,11 @@
-'use client';
-
-import dynamic from 'next/dynamic';
-
-const DynamicComponentWithNoSSR = dynamic(
-  () => import('@components/women/pages/nestedRoutes/profile/ProfileContainer'),
-  {
-    ssr: false,
-  },
-);
+import ProfileContainer from '@components/women/pages/nestedRoutes/profile/ProfileContainer';
 
 const Profile = () => {
-  return <DynamicComponentWithNoSSR />;
+  return (
+    <>
+      <ProfileContainer />
+    </>
+  );
 };
 
 export default Profile;

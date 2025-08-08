@@ -1,13 +1,11 @@
-'use client';
-
-import dynamic from 'next/dynamic';
-
-const DynamicComponentWithNoSSR = dynamic(() => import('@components/women/pages/mainRoutes/cycle/CyclePageContainer'), {
-  ssr: false,
-});
+import CyclePageContainer from '@components/women/pages/mainRoutes/cycle/CyclePageContainer';
 
 const Cycle = () => {
-  return <DynamicComponentWithNoSSR />;
+  return (
+    <>
+      <CyclePageContainer />
+    </>
+  );
 };
 
 export default Cycle;

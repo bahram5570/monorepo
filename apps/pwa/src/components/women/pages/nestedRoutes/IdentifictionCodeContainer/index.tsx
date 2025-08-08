@@ -1,3 +1,5 @@
+'use client';
+
 import inviteGift from '@assets/lottie/inviteGift.json';
 
 import Typography from '@components/ui/Typography';

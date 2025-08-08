@@ -1,3 +1,5 @@
+'use client';
+
 import { FOOTER_HEIGTH } from '@components/women/WomenFooter/constants';
 import WomenPageLayout from '@components/women/WomenPageLayout';
 import { HEADER_HEIGHT } from '@components/women/WomenPageLayout/constants';
