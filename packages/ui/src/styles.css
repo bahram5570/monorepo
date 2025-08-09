@@ -1,12 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @font-face {
-  font-family: YekanBakhVF;
-  src: url('@repo/assets/fonts/YekanBakh-VF.ttf');
-}
-
-* {
-  font-family: YekanBakhVF;
-} */

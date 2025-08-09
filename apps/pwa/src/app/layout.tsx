@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 
 const YekanBakhVF = localFont({
   display: 'swap',
-  src: '../../public/assets/fonts/YekanBakh-VF.ttf',
+  src: '../../public/assets/shared/fonts/YekanBakh-VF.ttf',
 });
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {

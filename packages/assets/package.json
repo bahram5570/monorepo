@@ -2,15 +2,8 @@
   "name": "@repo/assets",
   "version": "0.0.0",
   "private": true,
-  "exports": {
-    "./fonts/*": {
-      "import": "./dist/fonts/*"
-    },
-    "./images/*": {
-      "import": "./dist/images/*"
-    }
-  },
+  "type": "module",
   "scripts": {
-    "build": "copyfiles -u 1 src/fonts/** dist && copyfiles -u 1 src/images/** dist"
+    "build": "node index.js"
   }
 }

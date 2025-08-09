@@ -4,19 +4,16 @@
   "private": true,
   "exports": {
     "./styles.css": {
-      "import": "./dist/index.css",
-      "default": "./dist/index.css"
+      "import": "./dist/styles/index.css",
+      "default": "./dist/styles/index.css"
     },
     "./*": {
-      "import": "./dist/*/index.js",
-      "types": "./dist/*/index.d.ts"
+      "import": "./dist/components/*/index.js",
+      "types": "./dist/components/*/index.d.ts"
     }
   },
   "scripts": {
-    "build": "tsc --project tsconfig.json && tailwindcss -i ./src/styles.css -o ./dist/index.css"
-  },
-  "devDependencies": {
-    "@repo/assets": "*"
+    "build": "tsc --project tsconfig.json --outDir dist/components && tailwindcss -i ./src/styles.css -o ./dist/styles/index.css"
   },
   "peerDependencies": {
     "react": "^18.0.0",
